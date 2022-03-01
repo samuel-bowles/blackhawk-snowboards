@@ -1,0 +1,378 @@
+@charset "utf-8";
+
+html {
+    overflow-y: scroll;
+}
+
+body{
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Color Values */
+:root {
+    --white: #ffffff;
+    --blue: #2e3192;
+    --pale-yellow: #ffff66;
+    --pale-red: #ff565c;
+    --main-red: #d40000;
+    --dark-red: #a30000;
+    --light-grey: #cccccc;
+    --med-grey: #888888;
+    --dark-grey: #1f1919;
+    --dark: #190000;
+    --black: #000000;
+}
+
+.wrapper {
+    width: 100%;
+    background: var(--white);
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    margin-bottom: 50px;
+}
+
+.header-contents {
+    padding: 20px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.top-logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.top-menu {
+    color: var(--dark-grey);
+}
+
+.top-menu ul {
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.top-menu ul li {
+    flex-grow: 1;
+    overflow-wrap: anywhere;
+}
+
+.top-menu ul li:not(:last-child) {
+    border-right: 1px solid var(--dark-grey);
+}
+
+.top-menu li a {
+    display: block;
+    padding: 10px;
+    font-size: 2.25rem;
+    color: var(--dark-grey);
+}
+
+.top-menu li a:hover {
+    background: var(--dark-grey);
+    color: var(--white);
+}
+
+.top-menu .lang-switch a {
+    color: var(--blue);
+}
+
+.top-menu .lang-switch a:hover {
+    background: var(--blue);
+    color: var(--white);
+}
+
+/* Font sizes */
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+}
+
+p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+/* Main */
+main {
+    margin: 0 auto;
+}
+
+/* Hide hamburger on desktop */
+#hcheck,
+#hopen,
+#hclose {
+    display: none;
+}
+
+.footer-contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1920px;
+    margin: 10px auto;
+    align-items: center;
+}
+
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer ul li:not(:last-child) {
+    border-right: 1px solid var(--dark-grey);
+}
+
+footer ul li a {
+    display: block;
+    font-size: 1.875rem;
+    padding: 10px;
+    color: var(--dark-grey)
+}
+
+footer ul li a:hover {
+    background: var(--dark-grey);
+    color: var(--white);
+}
+
+footer .lang-switch a {
+    color: var(--blue);
+}
+
+footer .lang-switch a:hover {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.final-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.final-block + p {
+    max-width: 100px;
+}
+
+.final-block small {
+    font-size: 1rem;
+}
+
+small {
+    overflow-wrap: anywhere;
+}
+
+/* Auto Highlight Current Page in Header Menu */
+#top-page header .top-page a,
+#snowboards-page header .snowboards-page a,
+#shop-page header .shop-page a,
+#news-page header .news-page a,
+#access-page header .access-page a {
+	background: var(--dark-grey);
+	color: var(--white);
+}
+
+/* Auto Highlight Current Page in Footer Menu */
+#top-page footer .top-page a,
+#snowboards-page footer .snowboards-page a,
+#shop-page footer .shop-page a,
+#news-page footer .news-page a,
+#access-page footer .access-page a {
+	background: var(--dark-grey);
+	color: var(--white);
+}
+
+/* Menu Wrapping */
+@media screen and (max-width: 1130px) {
+    footer ul li a {
+        font-size: 1rem;
+    }
+
+    .footer-contents {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .top-menu li a {
+        font-size: 1.125rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .top-menu li a {
+        font-size: 1rem;
+        padding: 5px;
+    }
+}
+
+/* SP */
+@media screen and (max-width: 550px) {
+    header {
+        margin-bottom: 50px;
+    }
+
+    .header-contents {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Menu moves so no need for margin spacing below logo*/
+    .top-logo {
+        max-width: 85px;
+        margin-bottom: 0;
+    }
+
+    /* Hamburger Menu */
+    .top-menu {
+        z-index: 1;
+        position: fixed;
+        right: 20px;
+        text-align: right;
+    }
+
+    .top-menu ul {
+        max-width: 100%;
+        max-height: 100vh;
+        overflow-y: auto;
+        overflow-wrap: anywhere;
+        flex-direction: column;
+    }
+
+    .top-menu li{
+        display: block;
+        padding: 5px 0;
+    }
+
+    .top-menu ul li:not(:last-child) {
+        border-right: none;
+    }
+
+    .top-menu li a {
+        font-size: 1.25rem;
+    }
+
+    #hopen {
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        z-index: 5;
+        background: rgba(255, 255, 255, 0.8);
+    }
+
+    #hopen::before,
+    #hopen::after {
+        content: "";
+        display: block;
+        height: 0.2rem;
+        width: 3.02rem;
+        background: var(--dark-grey);
+        position: relative;
+        transition: all 0.5s;
+    }
+
+    #hclose, nav {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100%;
+    }
+
+    #hclose {
+        width: 75%;
+        background: var(--white);
+        opacity: 0.8;
+    }
+
+    nav {
+        width: 75%;
+        transform: translateX(100%);
+        padding-top: 75px;
+    }
+
+    nav li a {
+        display: block;
+    }
+
+    #hcheck:checked ~ #hclose {
+        display: block;
+    }
+
+    #hcheck:checked ~ #hopen {
+        width: 6rem;
+        line-height: 2rem;
+        background: none;
+    }
+
+    #hcheck:checked ~ #hopen::before {
+        transform: rotate(45deg);
+        transition: all 0.5s;
+        top: 1.1rem;
+    }
+    
+    #hcheck:checked ~ #hopen::after {
+        transform: rotate(-45deg);
+        transition: all 0.5s;
+        top: -1.1rem;
+    }
+
+    #hcheck:checked ~ nav {
+        transform: translateX(0);
+        transition: 0.5s;
+    }
+
+    /* Main font sizes */
+    h2 {
+        font-size: 1.25rem;
+        line-height: 2rem;
+    }
+
+    h3 {
+        font-size: 1.125rem;
+        line-height: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+
+    .footer-contents,
+    footer ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    footer {
+        font-size: 1rem;
+    }
+
+    footer .bottom-menu ul li {
+        border-right: none;
+    }
+
+    .final-block p {
+        padding: 5px 0;
+    }
+
+    .final-block small {
+        font-size: 0.8125rem;
+        overflow-wrap: anywhere;
+    }
+}

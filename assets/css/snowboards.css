@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+main {
+    width: 80%;
+    max-width: 1920px;
+    color: var(--dark-grey);
+    overflow-wrap: anywhere;
+}
+
+.text-block {
+    margin-bottom: 40px;
+}
+
+.selector {
+    display: flex;
+    text-align: center;
+}
+
+.selector-item {
+    flex: 1 1 20%;
+}
+
+.selector a {
+    color: var(--dark-grey);
+}
+
+.selector a img {
+    transition: all 0.3s ease-out;
+}
+
+.selector p {
+    margin: 10px auto;
+    transition: all 0.3s ease-out;
+}
+
+.selector a:hover p {
+    color: var(--white);
+    background: var(--dark-grey);
+    filter: drop-shadow(2px 2px 3px var(--dark-grey));
+    transition: all 0.2s ease-out;
+}
+
+.selector a:hover img {
+    filter: drop-shadow(2px 2px 3px var(--dark-grey));
+    transition: all 0.2s ease-out;
+
+}
+
+.top-display {
+    display: flex;
+}
+
+.board-viewer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 2 1 100%;
+}
+
+.board-viewer-images {
+    display: flex;
+    justify-content: space-around;
+}
+
+.board-viewer-button {
+    text-align: center;
+    width: 200px;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    margin: 20px auto;
+    background: rgba(212, 0, 0, 0.8);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.board-viewer-button:hover {
+    background:rgba(212, 0, 0, 1);
+}
+
+.specs {
+    flex: 1 2 100%;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dt::after {
+    content: ":";
+}
+
+@media screen and (max-width: 1000px) {
+    .selector p {
+        font-size: 1rem;
+    }
+}
+
+/* Modal Viewer */
+#bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+#viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 70%;
+    height: 90%;
+    background: var(--white);
+}
+
+@media screen and (max-width: 650px) {
+    .selector p {
+        font-size: 0.8125rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    main {
+        width: 90%;
+    }
+
+    .selector {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .selector-item {
+        flex: 1 1 50%;
+        max-width: 50%;
+
+    }
+
+    .specs {
+        line-height: 1.5rem;
+    }
+
+    .top-display {
+        flex-direction: column;
+    }
+
+}
+

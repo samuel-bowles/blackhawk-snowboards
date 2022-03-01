@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+main {
+    width: 80%;
+    max-width: 1920px;
+    color: var(--dark-grey);
+    overflow-wrap: anywhere;
+}
+
+.text-block {
+    margin-bottom: 40px;
+}
+
+.covid-19 {
+    width: 80%;
+    margin: 0 auto 40px;
+    background: var(--dark-red);
+    color: var(--white);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.covid-19 h3 {
+    text-align: center;
+}
+
+dl {
+    line-height: 2.5rem;
+    overflow-wrap: break-word;
+}
+
+dt {
+    font-size: 1.75rem;
+    background-position: -100%;
+}
+
+dd {
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted var(--dark-grey);
+}
+
+dd a {
+    color: var(--blue)
+}
+
+dd a:hover {
+    transition: all 0.3s linear;
+    background: var(--pale-yellow);
+}
+
+.banners {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.banners p {
+    margin-bottom: 40px;
+}
+
+.contact {
+    overflow-wrap: anywhere;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+}
+
+.social-icon {
+    margin: 0 10px;
+}
+
+.social-icon {
+    max-width: 64px;
+}
+
+/* SP */
+@media screen and (max-width: 550px) {
+    main {
+        width: 90%;
+    }
+    
+    .covid-19 {
+        width: 100%;
+        padding: 10px;
+    }
+
+    dt {
+        font-size: 1.125rem;
+    }
+
+    dd {
+        font-size: 1rem;
+    }
+ 
+}

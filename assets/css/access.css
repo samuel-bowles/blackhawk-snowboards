@@ -1,0 +1,43 @@
+@charset "utf-8";
+main {
+    width: 80%;
+    max-width: 1920px;
+    color: var(--dark-grey);
+}
+
+.text-block {
+    margin-bottom: 40px;
+}
+
+.google-map {
+    text-align: center;
+}
+
+.google-map iframe {
+    width: 100%;
+    min-height: 600px;
+}
+
+.contact {
+    overflow-wrap: anywhere;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+}
+
+.social-icon {
+    margin: 0 10px;
+}
+
+.social-icon {
+    max-width: 64px;
+}
+
+/* SP */
+@media screen and (max-width: 550px) {
+    main {
+        width: 90%;
+    }
+}

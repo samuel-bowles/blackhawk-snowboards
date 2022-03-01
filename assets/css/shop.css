@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+main {
+    width: 80%;
+    max-width: 1920px;
+    color: var(--dark-grey);
+    overflow-wrap: anywhere;
+}
+
+.text-block {
+    margin-bottom: 40px;
+}
+
+.large-img-container {
+    text-align: center;
+}
+
+.image-viewer {
+    display: flex;
+}
+
+.image-thumbs {
+    display: flex;
+    max-width: 20%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.image-thumbs p:hover {
+    cursor: pointer;
+    filter: brightness(120%);
+}
+
+.shop-small {
+    transition: all 0.2s ease-out;
+}
+
+.selected {
+    filter: drop-shadow(0px 5px 5px var(--dark-grey));
+    transition: all 0.3s ease-out;
+}
+
+.large-figcap {
+    margin: 10px auto 0;
+    padding: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+    color: var(--white);
+    background: var(--dark-grey);
+    font-size: 1rem;
+}
+
+.staff-members {
+    display: flex;
+    gap: 20px;
+}
+
+.staff-members figure {
+    flex: 1 1 100%;    
+}
+
+figure, figcaption {
+    display: block;
+}
+
+figcaption {
+    font-size: 1.5rem;
+    color: var(--dark-grey);
+    line-height: 2.5rem;
+    margin: 10px auto;
+}
+
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-box-front {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    text-align: center;
+}
+
+.flip-box-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    text-align: center;
+}
+
+.flip-box-back {
+    transform: rotateY(180deg);
+    filter: drop-shadow(3px 3px 3px var(--dark-grey));
+
+  }
+
+@media screen and (max-width: 550px) {
+
+    main {
+        width: 90%;
+    }
+
+    .image-viewer {
+        flex-direction: column-reverse;
+    }
+
+    .image-thumbs {
+        margin-right: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+
+    .image-thumbs p:nth-child(-n+2) {
+        margin-bottom: 10px;
+    }
+
+    .image-thumbs p {
+        box-sizing: border-box;
+        max-width: 50%;
+    }
+
+    .image-thumbs p:nth-child(odd) {
+        padding-right: 5px;
+    }
+
+    .image-thumbs p:nth-child(even) {
+        padding-left: 5px;
+    }
+
+    .large-figcap {
+        font-size: 0.8125rem;
+        padding: 5px;
+        margin: 10px auto;
+    }
+
+    figcaption {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+
+    .staff-members {
+        flex-direction: column;
+    }
+
+    :lang(ja) .flip-box::before {
+        content: "タップして反転";
+        position: relative;
+        line-height: 1.5rem;
+    }
+
+    :lang(en) .flip-box::before {
+        content: "tap to flip";
+        position: relative;
+        line-height: 1.5rem;
+    }
+}

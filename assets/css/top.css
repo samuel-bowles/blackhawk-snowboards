@@ -1,0 +1,100 @@
+@charset "utf-8";
+.bgimg-1 {
+    background-image: url(../images/top/top_page_background_1.jpg);
+}
+
+.bgimg-2 {
+    background-image: url(../images/top/top_page_background_2.jpg);
+}
+
+.bgimg-3 {
+    background-image: url(../images/top/top_page_background_3.jpg);
+}
+
+.bgimg {
+    position: relative;
+    opacity: 1;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    max-height: 1080px;
+    display: flex;
+    align-items: center;
+}
+
+.center-logo {
+    margin: 0 auto 100px;
+    max-width: 50%;
+    text-align: center;
+    background: var(--white);
+}
+
+main {
+    color: var(--white);
+}
+
+h2, .main-text {
+    overflow-wrap: break-word;
+}
+
+h2 {
+    font-weight: normal;
+    text-align: center;
+}
+
+.main-text {
+    position: relative;
+    width: 80%;
+    max-width: 1000px;
+    margin: 100px auto;
+    padding: 20px;
+    background: var(--dark-grey);
+}
+
+.main-text-1 h2 {
+    margin-bottom: 1rem;
+}
+
+.bgimg-header {
+    min-height: 250px;
+    width: 100%;
+    background: rgba(212, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+}
+
+.bgimg h2 {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background: var(--dark-grey);
+}
+
+/* SP */
+@media screen and (max-width: 550px) {
+    /* Disable bg fixed for iOS */
+    .bgimg {
+        background-attachment: initial;
+    }
+
+    .main-text {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+
+    .main-text-1 {
+        margin: 0 auto 100px;
+    }
+
+    .main-text-2,
+    .main-text-3,
+    .main-text-4 {
+        position: relative;
+        top: -100px;
+        background: rgba(31, 25, 25, 0.8);
+    }
+}
