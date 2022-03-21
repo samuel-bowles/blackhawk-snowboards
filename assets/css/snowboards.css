@@ -119,6 +119,26 @@ dt::after {
     background: var(--white);
 }
 
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 0.5s
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.fadeOut {
+    animation-name: fadeOut;
+    animation-duration: 0.5s;
+}
+
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+ }
+
 @media screen and (max-width: 650px) {
     .selector p {
         font-size: 0.8125rem;
