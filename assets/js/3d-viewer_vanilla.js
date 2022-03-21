@@ -1,14 +1,15 @@
 let viewButtons = document.querySelectorAll(".board-viewer-button");
 
-viewButtons.forEach(function(element) {
+
+viewButtons.forEach(function(element) {    
     element.addEventListener("click", function(event) {
         event.preventDefault();
         
         let modelSrc = this.href;
 
         let pageBody = document.querySelector("body");
-        pageBody.insertAdjacentHTML("beforeend", `<div id="bg" class="fadeIn"><div id="viewer" class="fadeIn"><model-viewer style="width: 100%; height: 100%" src=${modelSrc} class="fadeIn" auto-rotate camera-controls shadow-intensity="1"></model-viewer></div></div>`)
-
+        pageBody.insertAdjacentHTML("beforeend", `<div id="bg" class="fadeIn"><div id="viewer" class="fadeIn"><model-viewer style="width: 100%; height: 100%"; src="${modelSrc}" class="fadeIn" auto-rotate camera-controls shadow-intensity="1"></model-viewer></div></div>`)
+        
         document.querySelector("#viewer").addEventListener("click", function(event) {
             event.stopPropagation();
         })
@@ -29,4 +30,3 @@ viewButtons.forEach(function(element) {
         })
     })
 })
-
